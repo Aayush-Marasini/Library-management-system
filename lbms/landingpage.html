@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizon G.B.S</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="csslandingpage.css">
+
+
+  <h1>WELCOME TO LIBRARY OF HORIZON G.B.S</h1>
+
+
+  <div class="menu">
+    <div> <img src="media/logo1.png" alt="logo"> </div>
+    <div class="menu1"> <img src="media/iso.jpg" alt="iso"> </div>
+  </div>
+  <br><br><br><br><br>
+  <div id="slider-container">
+    <div class="slider-image active">
+      <img src="media/lib1.jpg" alt="">
+    </div>
+    <div class="slider-image">
+      <img src="media/lib2.jpg" alt="">
+    </div>
+    <div class="slider-image">
+      <img src="media/lib3.jpg" alt="">
+    </div>
+    <div class="slider-image">
+      <img src="media/lib4.jpg" alt="">
+    </div>
+    <div class="slider-image">
+      <img src="media/lib5.png" alt="">
+    </div>
+    <div id="dots-container"></div>
+  </div>
+
+  <br><br>
+
+  <br class="br">
+
+
+  <div class="container_block_of_btn">
+    <a class="signin-btn" href="signin.html">Sign In</a>
+    <a class="signup-btn" href="signup.html">Sign Up</a>
+    <br><br>
+  </div>
+  <br>
+
+  <div class="hp">
+    <div>
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7488.881050299204!2d83.46961372773721!3d27.64677254967951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399686f4158fa777%3A0x8b3d59e2870f1537!2sNew%20Horizon%20College!5e0!3m2!1sen!2snp!4v1676711102481!5m2!1sen!2snp"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="map"></iframe>
+    </div>
+    <div>
+      <iframe class="map" src="https://www.youtube.com/embed/M3py2bBm3-E" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+  <br><br>
+  <div class="bottom1">
+    <div> <a rel="noopener" class="a" target="_blank" href="https://www.horizongbs.edu.np/">Copyright by © New Horizon
+        Gautam
+        Buddha College</a> </div>
+    <div> <a rel="noopener" class="a" href="tel:+97771437602">☏ +97771437602 </a> </div>
+    <div> <a rel="noopener" class="a" href="mailto:info@horizongbs.edu.np">📧 info@horizongbs.edu.np </a> </div>
+    <div> <a rel="noopener" class="a" target="_blank" href="https://www.facebook.com/n3w.horizon.college">facebook</a>
+    </div>
+  </div>
+  <script>
+
+
+    const images = document.querySelectorAll('.slider-image');
+    const dotsContainer = document.getElementById('dots-container');
+
+    let index = 0;
+
+    // Create dots for each image
+    images.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (i === index) {
+        dot.classList.add('active');
+      }
+      dot.addEventListener('click', () => {
+        changeImage(i);
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    // Change image and update dot
+    function changeImage(newIndex) {
+      if (newIndex === index) {
+        return;
+      }
+      const currentImage = images[index];
+      const newImage = images[newIndex];
+      currentImage.classList.remove('active');
+      newImage.classList.add('active', 'fade-in');
+      const currentDot = dotsContainer.children[index];
+      const newDot = dotsContainer.children[newIndex];
+      currentDot.classList.remove('active');
+      newDot.classList.add('active');
+      index = newIndex;
+    }
+
+    // Automatically change image every 3 seconds
+    setInterval(() => {
+      let newIndex = index + 1;
+      if (newIndex === images.length) {
+        newIndex = 0;
+      }
+      changeImage(newIndex);
+    }, 3000);
+
+
+
+  </script>
+</body>
+
+</html>

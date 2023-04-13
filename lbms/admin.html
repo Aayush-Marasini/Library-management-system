@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="adminstyle.css">
+    <title>admin</title>
+</head>
+
+<body>
+    <!--top/header-->
+    <div class="menu">
+        <div> <img src="media/logo1.png" alt="logo"> </div>
+        <div class="bottom"> <img src="media/iso.jpg" alt="iso"> </div>
+    </div>
+    <!--id card ko pura sar saman
+    -->
+    <div class="id-card" onmouseover="highlightCard()" onmouseout="unhighlightCard()">
+
+        <div class="id-info">
+            <h1>Librarian ID</h1>
+            <div class="id-photo">
+                <button class="pp" onclick="openPopup()"> <img id="profilePic" src="media/profile.png" alt="Choose a Profile Picture"> </button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closePopup()">&times;</span>
+                        <h2>Upload Profile Picture</h2>
+                        <div class="uploadpp">
+                            <input type="file" id="fileInput">
+                            <button type="button" onclick="uploadImage()">Upload</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div><strong>ID No:</strong> <span id="idNo"></span></div>
+            <div><strong>Name:</strong> <span id="name"></span></div>
+            <div><strong>Email:</strong> <span id="email"></span></div>
+        </div>
+    </div>
+    <!--book search garni-->
+    <form>
+        <h1>Search books</h1>
+    </form>
+    <nav class="searchWhole">
+        <div class="search" id="">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="searchBook" id="searchTxt" type="search" placeholder="Search" aria-label="Search" />
+                <button class="searchButton" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <br><br><br><br><br><br>
+    <!--add book ko form-->
+<div id="addbook">
+    <form id="libraryForm">
+
+            <label for="bookName" class="lib input">Name</label>
+            <div class="inputBox">
+                <input type="text" class="form-control" id="book" placeholder="Book Name" />
+
+            <br>
+        </div>
+            <label for="Author" class="lib input">Author</label>
+            <div class="inputBox">
+                <input type="text" class="form-control" id="author" placeholder="Author" />
+        </div>
+        <br>
+            <label for="Type" class="lib input">Type</label>
+            <div class="inputBox">
+                <input type="text" class="form-control" id="type" placeholder="Type" />
+        </div>
+        <label for="id" class="lib input">ID</label>
+        <div class="inputBox">
+            <input type="number" class="form-control" id="ID" placeholder="Book ID" />
+    </div>
+        <br>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btnaddbook" onclick="addBook()">
+                    Add Book
+                </button>
+                <button type="button" class="btnaddbook" onclick="closepop()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </form>    
+</div>
+<!--rent a book ko form 
+libririan lai matra access hunxa-->
+<div id="rentBookForm" class="form-container">
+    <h2>Rent a Book</h2>
+    <form id="rentForm" >
+      <div class="form-group">
+        <label for="bookTitle">Book Title:</label>
+        <input type="text" id="bookTitle" name="bookTitle" required>
+      </div>
+      <div class="form-group">
+        <label for="bookId">Book ID:</label>
+        <input type="number" id="bookId" name="bookId" required>
+      </div>
+      <div class="form-group">
+        <label for="renterName">Renter Name:</label>
+        <input type="text" id="renterName" name="renterName" required>
+      </div>
+      <div class="form-group">
+        <label for="renterId">Renter ID:</label>
+        <input type="number" id="renterId" name="renterId" required>
+      </div>
+      <button type="submit" onclick="submitrentabook()" >Rent Book</button>
+      <button onclick="rentabookclose()">Cancel</button>
+    </form>
+</div>
+<!--Renew a book ko form hai yo chai-->
+<div id="renewbookform">
+<div class="form-container">
+    <h1>Renew Book</h1>
+    <form id="renewForm">
+        <label for="bookId">Book ID:</label>
+        <input type="text" id="bookId" name="bookId" required>
+
+        <label for="bookName">Book Name:</label>
+        <input type="text" id="bookName" name="bookName" required>
+
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId" required>
+
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <button onclick="renewdata()">Renew</button>
+        <button onclick="renewbookclose()">Close</button>
+    </form>
+</div>
+</div>
+<!-- 3 ota cards-->
+    <div class="card-container">
+        <div onclick="rentabook()" class="card">
+          <div class="card-image" style="background-image: url('media/book.jpg');"></div>
+          <div class="card-content">
+            <h3>Rent a book</h3>
+
+          </div>
+        </div>
+        <div onclick="renewbook()" class="card">
+          <div class="card-image" style="background-image: url('media/book1.jpg');"></div>
+          <div class="card-content">
+            <h3>Renew a book</h3>
+          </div>
+        </div>
+        <div onclick="addbookwindow()" class="card">
+          <div class="card-image" style="background-image: url('media/book2.jpg');"></div>
+          <div class="card-content">
+            <h3>Add book</h3>
+          </div>
+        </div>
+      </div>
+    <!--footer-->
+    <div class="bottom1">
+        <div> <a rel="noopener" class="a" target="_blank" href="https://www.horizongbs.edu.np/">Copyright by © New
+                Horizon
+                Gautam
+                Buddha College</a> </div>
+        <div> <a rel="noopener" class="a" href="tel:+97771437602">☏ +97771437602 </a> </div>
+        <div> <a rel="noopener" class="a" href="mailto:info@horizongbs.edu.np">📧 info@horizongbs.edu.np </a> </div>
+        <div> <a rel="noopener" class="a" target="_blank" href="https://www.facebook.com/n3w.horizon.college"> <id="fb" alt="Facebook"> Facebook</a> </div>
+    </div>
+    <script src="libraryscript.js"></script>
+</body>
+
+</html>

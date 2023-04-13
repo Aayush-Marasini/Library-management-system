@@ -1,0 +1,419 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  z-index: 1;
+}
+
+body {
+  background-color: #000000;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="search"],
+button {
+  border: none;
+  outline: none;
+}
+
+/* Header */
+.menu {
+  background-color: #00a8cc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.menu img {
+  height: 50px;
+}
+
+/* ID card */
+.id-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 50px auto;
+  width: 80%;
+  padding: 20px;
+}
+
+.id-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.id-info h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #4f4f4f;
+}
+
+.id-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.id-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.uploadpp {
+  display: flex;
+  flex-direction: column;
+}
+
+.uploadpp input {
+  margin-bottom: 10px;
+}
+
+/* Body style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header style */
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Search form style */
+.searchWhole {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.searchButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #3e8e41;
+}
+
+.searchBook {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+/* Style for the footer */
+.bottom1 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 20px;
+  font-size: 16px;
+  color: #fff;
+  height: 80px;
+  align-items: center; /* center align the content vertically */
+}
+
+.bottom1 div {
+  text-align: center; /* center align the content horizontally */
+}
+
+.bottom1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.bottom1 a:hover {
+  text-decoration: underline;
+}
+/*for 3 cards*/
+
+
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 ;
+  max-width: 800px;
+  margin: auto;
+}
+.card-container div{
+	padding: 12px;
+}
+.card {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.card:hover {
+  transform: translate(-5px, -5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-out;
+}
+
+.card-image:hover {
+  transform: scale(1.1);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease-out;
+}
+
+.card-content:hover {
+  transform: translateY(-50%);
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+
+
+/*3 card css ends*/
+
+/* Book form style */
+#addbook{
+  display: none;
+  position: absolute;
+  left: 34%;
+z-index: 9;
+width: 400px;
+background-color: white;
+top: 100%;
+}
+#libraryForm {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.inputBox {
+  display: flex;
+}
+
+.inputBox input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.lib {
+  font-weight: bold;
+}
+
+.btnaddbook {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* for rent a book */
+#rentBookForm{
+  position: absolute;
+  display: none;
+  left: 35%;
+z-index: 9;
+width: 400px;
+top: 100%;
+background-color: white;
+}
+.form-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-container label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.form-container button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+/* for rent a book ends */
+/* for renew a book*/
+#renewbookform{
+  position: absolute;
+  display: none;
+  left: 35%;
+z-index: 9;
+width: 400px;
+background-color: white;
+top: 100%;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+/*renew a book ends*/

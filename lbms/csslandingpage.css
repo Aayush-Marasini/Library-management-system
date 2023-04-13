@@ -1,0 +1,171 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+  font-family: "cursive";
+  background-color: #2c3e50;
+  color: whitesmoke;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #dcdcdc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.menu img {
+  height: 80px;
+  width: 200px;
+}
+
+.menu1 {
+  margin-left: auto;
+}
+
+.menu1 img {
+  height: 80px;
+  width: 200px;
+}
+/*image slider starts*/
+
+#slider-container {
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider-image.active {
+  opacity: 1;
+}
+
+.slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #000;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*image slider ends*/
+
+#bg {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.container_block_of_btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.signin-btn,
+.signup-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #0d2c54;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.signin-btn:hover,
+.signup-btn:hover {
+  background-color: #2c3e50;
+}
+
+.hp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.map {
+  width: 500px;
+  height: 300px;
+  margin: 0 20px;
+}
+
+.bottom1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.bottom1 a {
+  color: white;
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
+
+#fb {
+  height: 30px;
+  margin-left: 10px;
+}
